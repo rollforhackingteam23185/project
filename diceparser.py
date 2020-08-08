@@ -59,7 +59,7 @@ def parse(string):
                         r.append("d")
                         r.append("+")
                     r=r+q[i+1:]
-                    queue2.append(r)
+                    queue2.append(r.copy())
                     print(r)
                 else:
                     r=q[:i-2]
@@ -67,31 +67,31 @@ def parse(string):
                     j=i-2
                     r=r+q[i+1:]
                     for r[i-2] in range(1,int(q[i-1])+1):
-                        queue2.append(r)
+                        queue2.append(r.copy())
                         print(r)
             elif q[i] == "+":
                 r=q[:i-2]
                 r.append(str(int(q[i-2])+int(q[i-1])))
                 r=r+q[i+1:]
-                queue2.append(r)
+                queue2.append(r.copy())
                 print(r)
             elif q[i] == "-":
                 r=q[:i-2]
                 r.append(str(int(q[i-2])-int(q[i-1])))
                 r=r+q[i+1:]
-                queue2.append(r)
+                queue2.append(r.copy())
                 print(r)
             elif q[i] == "*":
                 r=q[:i-2]
                 r.append(str(int(q[i-2])*int(q[i-1])))
                 r=r+q[i+1:]
-                queue2.append(r)
+                queue2.append(r.copy())
                 print(r)
             elif q[i] == "^":
                 r=q[:i-2]
                 r.append(str(int(q[i-2])**int(q[i-1])))
                 r=r+q[i+1:]
-                queue2.append(r)
+                queue2.append(r.copy())
                 print(r)
         queue=queue2
 
