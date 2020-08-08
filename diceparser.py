@@ -106,7 +106,7 @@ def parse(string):
     return result
 
 def main():
-    print(parse(" ( 1 d 6 ) d 6"))
+    print(parse("6 d 6"))
 
 if __name__ == "__main__":
     main()
