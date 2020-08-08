@@ -3,7 +3,11 @@
 def parse(string):
     #...
     # sample 1d20;
-    ret = []
+    ret = {}
     for i in range(1,20):
-        ret[i]++;
+        print i
+        if i in ret:
+            ret[i]=ret[i]+1
+        else:
+            ret[i]=1
     return ret
