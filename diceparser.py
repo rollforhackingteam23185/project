@@ -31,7 +31,7 @@ def parse(string):
     stack.pop()
 
 def main():
-    print (parse("1 d 6"))
+    print(parse("1 d 6"))
 
 if __name__ == "__main__":
     main()
