@@ -93,13 +93,7 @@ def parse(string):
                 r=r+q[i+1:]
                 queue2.append(r)
                 print(r)
-
-
         queue=queue2
-
-            
-
-
 
 def main():
     print(parse("2 d 6"))
