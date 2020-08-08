@@ -14,9 +14,9 @@ def parse(string):
             result.append(a)
         elif a in precedences: #a is an operator
             print(len(stack))
-            while len(stack)!=0 and stack[-1] in precedences \
-                    and precedences[stack[-1]]<precedences[a] \
-                    or precedences[stack[-1]]==precedences[a] and a!="d":
+            while len(stack)!=0 and (stack[-1] in precedences \
+                    and (precedences[stack[-1]]<precedences[a] \
+                    or (precedences[stack[-1]]==precedences[a] and a!="d"))):
                         result.append(stack[-1])
                         stack.pop()
             stack.append(a)
