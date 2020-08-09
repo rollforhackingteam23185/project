@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>
-		</title>
-		<meta charset="utf-8" />
-	</head>
-	<body>
-		<form method=post action=index.html>
-			<p>please ender the formula for dice throws. please note that the more dice you roll the longoer it will take.</p>
-			<ul>
-			operators supported:
-			<li>+</li>
-			<li>-</li>
-			<li>*</li>
-			<li>^</li>
-			<li>d</li>
-			</ul>
-			<input type=text name=formula />
-			<input type=submit />
-		</form>
-	<iframe src="dice-graph.html" />
-	</body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Graph your die</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<header></header>
+    <form method="POST" action="{{ url_for('graph') }}">
+        <p>please enter the formula for dice throws. please note that the more dice you roll the longer it will take.</p>
+        <ul>
+        operators supported:
+        <li>+</li>
+        <li>-</li>
+        <li>*</li>
+        <li>^</li>
+        <li>d</li>
+        </ul>
+        <input type=text name=formula />
+        <input type=submit />
+    </form>
+    <iframe src="{{ url_for('graph') }}" width="650" height="650"></iframe>
+</body>
 </html>
-
-
