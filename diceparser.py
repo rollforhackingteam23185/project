@@ -2,7 +2,7 @@
 
 def parse(tokens):
     #print(tokens)
-    precedences = {"+": 10,"-":9, "*":7, "^":5, "d": 0}
+    precedences = {"+": 10,"-":9, "*":7, "^":5, "a":4, "A":4, "d": 0}
     #turn into rpn
     stack = [];
     result = [];
@@ -92,6 +92,16 @@ def parse(tokens):
                 r=r+q[i+1:]
                 queue2.append(r.copy())
                 #print(r)
+            elif q[i] == "a":
+                r=q[:i-2]
+                r.append(str(min(int(q[i-2]),int(q[i-1]))))
+                r=r+q[i+1:]
+                queue2.append(r.copy())
+            elif q[i] == "A":
+                r=q[:i-2]
+                r.append(str(max(int(q[i-2]),int(q[i-1]))))
+                r=r+q[i+1:]
+                queue2.append(r.copy())
         queue=queue2.copy()
 #        print(queue)
     result={}
@@ -104,7 +114,7 @@ def parse(tokens):
     return result
 
 def main():
-    print(parse(["6","d","6"]))
+    print(parse(["(","1","d","6","A","1","d","6",")","a","2","d","6"]))
 
 if __name__ == "__main__":
     main()
