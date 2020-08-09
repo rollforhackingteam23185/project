@@ -7,12 +7,20 @@
 	</head>
 	<body>
 		<form method=post action=index.html>
-			please enter the formula for the dice, with everything seperated by a space. examples: "1 d 6","2 + 3 d 20"
+			<p>please ender the formula for dice throws. please note that the more dice you roll the longoer it will take.</p>
+			<ul>
+			operators supported:
+			<li>+</li>
+			<li>-</li>
+			<li>*</li>
+			<li>^</li>
+			<li>d</li>
+			</ul>
 			<input type=text name=formula />
 			<input type=submit />
 		</form>
-	</body>
 	<iframe src="dice-graph.html" />
+	</body>
 </html>
 
 
