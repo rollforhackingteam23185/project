@@ -1,8 +1,6 @@
 #step one: produce an easily computable format (i.e. RPN)
 
-def parse(string):
-    #assuming all tokens seperated by whitespace
-    tokens = string.split()
+def parse(tokens):
     #print(tokens)
     precedences = {"+": 10,"-":9, "*":7, "^":5, "d": 0}
     #turn into rpn
@@ -106,7 +104,7 @@ def parse(string):
     return result
 
 def main():
-    print(parse("6 d 6"))
+    print(parse(["6","d","6"]))
 
 if __name__ == "__main__":
     main()
